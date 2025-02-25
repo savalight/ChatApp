@@ -25,12 +25,11 @@ def main():
 
     if send_button or st.session_state.send_input:
         if st.session_state.user_question != "":
+            llm_response = "This is a response from the LLM model"
 
-        llm_response = "This is a response from the LLM model"
-
-        with chat_container:
-            st.chat_message("user").write( st.session_state.user_question)
-            st.chat_message("ai").write("here is the answer")
+            with chat_container:
+                st.chat_message("user").write( st.session_state.user_question)
+                st.chat_message("ai").write("here is the answer")
 
 if __name__=="__main__":
     main()
